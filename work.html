@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work | Rajkumar Gopu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    body {
+      height: 100vh;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #a1b1f5 0%, #d4ddf8 50%, #fff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    body.dark-mode {
+      background: #000 !important;
+      color: #fff !important;
+    }
+    body.dark-mode * {
+      background: transparent !important;
+      color: #fff !important;
+      box-shadow: none !important;
+      border-color: #222 !important;
+    }
+    header {
+      width: 100%;
+      background: none;
+      box-shadow: none;
+      padding: 2rem 0 0 0;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+    header a {
+      background: linear-gradient(90deg, #a1b1f5 0%, #d4ddf8 100%);
+      color: #3a3a7c;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(161,177,245,0.12);
+      transition: background 0.2s, transform 0.2s, color 0.2s, text-decoration 0.2s;
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 2rem;
+    }
+    header a:hover {
+      background: linear-gradient(90deg, #d4ddf8 0%, #a1b1f5 100%);
+      color: #3a3a7c;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(161,177,245,0.18);
+      text-decoration: none;
+    }
+    nav a {
+      background: linear-gradient(90deg, #a1b1f5 0%, #d4ddf8 100%);
+      color: #3a3a7c;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(161,177,245,0.12);
+      transition: background 0.2s, transform 0.2s, color 0.2s, text-decoration 0.2s;
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 2rem;
+    }
+    nav a:hover {
+      background: linear-gradient(90deg, #d4ddf8 0%, #a1b1f5 100%);
+      color: #3a3a7c;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(161,177,245,0.18);
+      text-decoration: none;
+    }
+    .btn, .logo {
+      background: linear-gradient(90deg, #a1b1f5 0%, #d4ddf8 100%);
+      color: #3a3a7c;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(161,177,245,0.12);
+      transition: background 0.2s, transform 0.2s, color 0.2s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn:hover, .logo:hover {
+      background: linear-gradient(90deg, #d4ddf8 0%, #a1b1f5 100%);
+      color: #3a3a7c;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(161,177,245,0.18);
+      text-decoration: none;
+    }
+    .container {
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      /* Remove white background and glassmorphism */
+      padding: 3rem 2.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+      min-width: 700px;
+      max-width: 1100px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      display: flex;
+    }
+    .container::before, .container::after {
+      display: none;
+    }
+    .text, h1, p, .job {
+      background: none;
+      box-shadow: none;
+    }
+    .text {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .job {
+      background: linear-gradient(90deg, #a1b1f5 0%, #d4ddf8 100%);
+      color: #3a3a7c;
+      border-radius: 25px;
+      box-shadow: 0 2px 8px rgba(161,177,245,0.12);
+      padding: 1.5rem 1.2rem;
+      margin-bottom: 0;
+      transition: background 0.18s, color 0.18s, transform 0.18s, box-shadow 0.18s;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+    }
+    body.dark-mode .job,
+    body.dark-mode .btn,
+    body.dark-mode .logo,
+    body.dark-mode nav a,
+    body.dark-mode header a {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+    }
+    body.dark-mode .job:hover,
+    body.dark-mode .btn:hover,
+    body.dark-mode .logo:hover,
+    body.dark-mode nav a:hover,
+    body.dark-mode header a:hover {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: 0 6px 24px rgba(255,255,255,0.18);
+    }
+    .dark-toggle {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 100;
+      background: #222;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: background 0.2s, color 0.2s;
+    }
+    .dark-toggle.active {
+      background: #111;
+      color: #fff;
+    }
+    h1 {
+      grid-column: 1 / -1;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #3a3a7c;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    p {
+      color: #3a3a7c;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    /* Decorative background shapes */
+    body::before, body::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+      opacity: 0.18;
+    }
+    body::before {
+      width: 420px;
+      height: 420px;
+      background: #a1b1f5;
+      top: -120px;
+      left: -120px;
+    }
+    body::after {
+      width: 320px;
+      height: 320px;
+      background: #ff5959;
+      bottom: -100px;
+      right: -100px;
+    }
+    @media (max-width: 1200px) {
+      .container {
+        min-width: 90vw;
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 900px) {
+      .container {
+        min-width: unset;
+        max-width: 98vw;
+      }
+      .text {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1rem;
+        min-width: unset;
+        max-width: 98vw;
+      }
+      h1 { font-size: 1.5rem; }
+      header { padding: 1rem 0 0 0; }
+    }
+    .image { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">&larr; Home</a>
+  </header>
+  <div class="container">
+    <div class="text">
+      <h1>Work Experience</h1>
+
+      <div class="job">
+        <h2>Product Engineer – Retraced</h2>
+        <span>2023–Present</span>
+        <p>Built scalable microservices and event-driven architectures, integrated ML for supply chain risk reduction, and improved backend performance and reliability.</p>
+      </div>
+
+      <div class="job">
+        <h2>Software Developer – Verizon</h2>
+        <span>2022–2023</span>
+        <p>Developed and deployed secure backend APIs, automated regression testing, and contributed to global enterprise initiatives.</p>
+      </div>
+
+      <div class="job">
+        <h2>Tech Lead – Ericsson</h2>
+        <span>2020–2022</span>
+        <p>Led a team of engineers delivering order management platforms, with CI/CD pipelines and on-time releases in Agile sprints.</p>
+      </div>
+
+      <div class="job">
+        <h2>Specialist Developer – Infosys</h2>
+        <span>2017–2020</span>
+        <p>Delivered enterprise-grade telecom apps and collaborated with stakeholders in fast-paced environments.</p>
+      </div>
+    </div>
+  </div>
+  <button class="dark-toggle" id="darkToggle">Dark Mode</button>
+  <script>
+    // Maintain dark mode state across pages
+    const darkToggle = document.getElementById('darkToggle');
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      darkToggle.textContent = 'Light Mode';
+    }
+    darkToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+      darkToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
+</body>
+</html>
