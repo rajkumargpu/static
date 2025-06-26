@@ -223,14 +223,23 @@
       h1 { font-size: 1.5rem; }
       header { padding: 1rem 0 0 0; }
     }
+    body.dark-mode .logo {
+      background: #222 !important;
+      color: #fff !important;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+    }
     body.dark-mode header a,
     body.dark-mode .btn,
-    body.dark-mode .logo,
     body.dark-mode nav a,
     body.dark-mode h1,
     body.dark-mode p {
+      background: #111 !important;
+      color: #fff !important;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+    }
+    body.dark-mode .logo:hover{
       background: #fff !important;
-      color: #111 !important;
+      color: #222 !important;
       box-shadow: 0 2px 8px rgba(255,255,255,0.08);
     }
     body.dark-mode .btn:hover,

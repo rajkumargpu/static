@@ -156,8 +156,8 @@
     body.dark-mode .logo,
     body.dark-mode nav a,
     body.dark-mode header a {
-      background: #fff !important;
-      color: #111 !important;
+      background: #222 !important;
+      color: #fff !important;
       box-shadow: 0 2px 8px rgba(255,255,255,0.08);
     }
     body.dark-mode .job:hover,
@@ -166,6 +166,18 @@
     body.dark-mode nav a:hover,
     body.dark-mode header a:hover {
       background: #fff !important;
+      color: #111 !important;
+      box-shadow: 0 6px 24px rgba(255,255,255,0.18);
+    }
+
+
+    body.dark-mode .job {
+      background: #111 !important;
+      color: #111 !important;
+      box-shadow: 0 6px 24px rgba(255,255,255,0.18);
+    }
+    body.dark-mode .job:hover{
+      background: #222 !important;
       color: #111 !important;
       box-shadow: 0 6px 24px rgba(255,255,255,0.18);
     }
@@ -285,7 +297,6 @@
       </div>
     </div>
   </div>
-  <button class="dark-toggle" id="darkToggle">Dark Mode</button>
   <script>
     // Maintain dark mode state across pages
     const darkToggle = document.getElementById('darkToggle');

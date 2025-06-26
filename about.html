@@ -75,8 +75,8 @@
     body.dark-mode p,
     body.dark-mode .job,
     body.dark-mode .job h2 {
-      background: #fff !important;
-      color: #111 !important;
+      background: #111 !important;
+      color: #fff !important;
       box-shadow: 0 2px 8px rgba(255,255,255,0.08);
     }
     body.dark-mode .job:hover,
@@ -182,8 +182,37 @@
       transition: background 0.2s, color 0.2s;
     }
     .dark-toggle.active {
-      background: #111;
+      background: #222;
       color: #fff;
+    }
+    /* Decorative background shapes */
+    body::before, body::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      z-index: 1;
+      opacity: 0.18;
+      transition: background 0.2s;
+    }
+    body::before {
+      width: 420px;
+      height: 420px;
+      background: #a1b1f5;
+      top: -120px;
+      left: -120px;
+    }
+    body::after {
+      width: 320px;
+      height: 320px;
+      background: #ff5959;
+      bottom: -100px;
+      right: -100px;
+    }
+    body.dark-mode::before {
+      background: #222 !important;
+    }
+    body.dark-mode::after {
+      background: #333 !important;
     }
     @media (max-width: 900px) {
       .container {
@@ -207,7 +236,6 @@
   <header>
     <a href="index.html">&larr; Home</a>
   </header>
-  <button class="dark-toggle" id="darkToggle">Dark Mode</button>
   <div class="container">
     <h1>About Me</h1>
     <p>With over a decade of experience in software engineering, I specialize in building full-stack applications using Node.js, React, and cloud-native tools. I’m passionate about creating efficient and scalable systems, and I love integrating AI and automation into modern enterprise software. I thrive in collaborative environments and continuously seek opportunities to learn and grow in the tech space.</p>

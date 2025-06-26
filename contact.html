@@ -220,8 +220,14 @@
       transition: background 0.2s, color 0.2s;
     }
     .dark-toggle.active {
-      background: #111;
-      color: #fff;
+      background: #fff;
+      color: #222;
+    }
+    body.dark-mode header a:hover, 
+    body.dark-mode div a:hover {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: 0 6px 24px rgba(255,255,255,0.18);
     }
   </style>
 </head>
@@ -241,7 +247,6 @@
   </section>
     </div>
   </div>
-  <button class="dark-toggle" id="darkToggle">Dark Mode</button>
   <script>
     // Maintain dark mode state across pages
     const darkToggle = document.getElementById('darkToggle');
