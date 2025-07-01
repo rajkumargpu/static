@@ -1,4 +1,5 @@
 // Smooth scroll for anchor links
+//disabe auto merge
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
