@@ -20,6 +20,4 @@ jobs:
           aws-region: eu-north-1
 
       - name: Sync files to S3
-        run: aws s3 sync . s3://your-s3-bucket-name --delete --exclude ".github/*"
-
-
+        run: aws s3 sync . s3://rajkumargopu.dev --delete --exclude ".github/*"
